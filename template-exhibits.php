@@ -12,27 +12,30 @@ Template Name: Exhibits
 
 <?php 
 
-$args = array (
-'post_type' => 'exhibits',
-'posts_per_page' => 3,
-'orderby' => 'rand'
-	);
+$args = array( 'post_type' => 'exhibits', 'posts_per_page' => 10);
 $exhibits = new WP_Query( $args );
-echo '<div id="exhibits">';
-while ($exhibits->have_posts() ) : $exhibits->the_post();
-echo '<div class="exhibit">';
-echo '<h3>' . get_the_title() . '</h3>';
-echo '<p><strong>' . get_cfc_meta() . '</p></strong>';
-echo '<p>';
-the_content();
-echo '</p>';
-echo '</div>';
+while ( $exhibits->have_posts() ) : $exhibits->the_post();
+	echo '<h3>';
+	the_title();
+	echo '</h3>';
+	echo '<div class="entry-content">';
+	the_content();
+	echo '</div>';
 endwhile;
-echo '</div>';
-wp_reset_query();
 
 ?>
 
+<?php 
+$title = get_cfc_meta( 'title' );
+if( !empty( $title ) ){
+    foreach( $title as $exhibit ){
+    	echo '<h4>' . $exhibit ['exhibit-title'] . '</h4>';
+        echo '<p><strong>Location: </strong>' . $exhibit ['location'] . '</p>';
+        echo '<p><strong>Date: </strong>' . $exhibit ['date'] . '</p>';
+        echo '<p><strong>Description: </strong>' . $exhibit ['exhibit-description'] . '</p>';
+    }
+}
+?> 
 		</section>
 	</div>
 </div> 
