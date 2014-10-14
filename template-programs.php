@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Exhibits
+Template Name: Programs
 */
 ?>	
 <?php get_header(); ?>
@@ -13,9 +13,9 @@ Template Name: Exhibits
 
 <?php 
 
-$args = array( 'post_type' => 'exhibits', 'posts_per_page' => 10);
-$exhibits = new WP_Query( $args );
-while ( $exhibits->have_posts() ) : $exhibits->the_post();
+$args = array( 'post_type' => 'programs', 'posts_per_page' => 10);
+$programs = new WP_Query( $args );
+while ( $programs->have_posts() ) : $programs->the_post();
 	echo '<h3>';
 	the_title();
 	echo '</h3>';

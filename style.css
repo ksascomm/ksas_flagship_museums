@@ -113,3 +113,7 @@ li.external a::after {
 #main_nav .exclude {
 	display: none !important;
 }
+
+body.custom-background {
+	background-size: cover;
+}
