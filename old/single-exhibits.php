@@ -8,9 +8,9 @@
 			<h5><?php the_title(); ?></h5>
 			<?php foreach( get_cfc_meta( 'ksasexhibits' ) as $key => $value ){ ?>
     <div class="<?php echo $key ?>">
-       <p><strong>Location:</strong> <?php the_cfc_field( 'title','location', $key ); ?></p>
-       <p><strong>Date(s):</strong> <?php the_cfc_field( 'title','date', $key ); ?></p>
-       <p><strong>Description:</strong> <?php the_cfc_field( 'title','exhibit-description', $key ); ?></p>
+       <p><strong>Location:</strong> <?php the_cfc_field( 'ksasexhibits','location', $key ); ?></p>
+       <p><strong>Date(s):</strong> <?php the_cfc_field( 'ksasexhibits','date', $key ); ?></p>
+       <p><strong>Description:</strong> <?php the_cfc_field( 'ksasexhibits','exhibit-description', $key ); ?></p>
     </div>
 <?php }  ?>
 		</section>
