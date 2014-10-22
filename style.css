@@ -119,6 +119,9 @@ body.custom-background {
 }
 
 /******* FIELDS OF STUDY LANDING PAGES ******/
+a.field img {
+margin-left: 0px !important;
+}
 .mobile-field {margin-bottom: 30px;}
 div.field {
 	background: #d9c89e;
@@ -182,4 +185,15 @@ ul.nav:last-child {
 	font-size:14px;
 	text-indent:15px;
 	height:35px;
+}
+
+#featured { background: url(spinner.gif) center center #f4f4f4 no-repeat; height: 300px; }
+#featured img { display: none; }
+
+#featured.orbit { background: none; }
+#featured.orbit img { display: block; }
+
+.exhibit-slide {
+max-height: 500px;
+overflow: hidden;
 }
