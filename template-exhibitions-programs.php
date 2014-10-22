@@ -7,8 +7,8 @@ Template Name: Exhibitions & Programs
 	//Set Exhibitions & Programs Query Parameters
 				$flagship_exhibitions_query = new WP_Query(array(
 					'post_type' => 'ksasexhibits',
-					'orderby' => 'title',
-					'order' => 'ASC',
+					'orderby' => 'date',
+					'order' => 'DESC',
 					'posts_per_page' => '-1'
 					));
 					 ?>
@@ -92,8 +92,8 @@ Template Name: Exhibitions & Programs
 							<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
 										<b>Dates:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?><br>
 									<?php endif; ?>
-							<?php if (get_post_meta($post->ID, 'ecpt_description', true)) : ?>
-										<b>Description:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_description', true); ?><br>
+							<?php if (get_post_meta($post->ID, 'ecpt_description_short', true)) : ?>
+										<b>Description:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
 									<?php endif; ?>
 						</p>
 
