@@ -73,7 +73,7 @@ Template Name: Exhibitions & Programs
 			endif; ?>
 		
 		<!-- Set classes for isotype.js filter buttons -->
-		<div class="six columns mobile-four mobile-field  <?php echo $program_type_name . ' ' . $school_name; ?>">
+		<div class="four columns mobile-four mobile-field  <?php echo $program_type_name . ' ' . $school_name; ?>">
 			
 			<div class="twelve columns field radius10" id="<?php echo $program_name; ?>">
 			<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field">
@@ -87,13 +87,13 @@ Template Name: Exhibitions & Programs
 					<div class="twelve columns">
 						<p>
 							<?php if (get_post_meta($post->ID, 'ecpt_location', true)) : ?>
-										<b>Location:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_location', true); ?><br>
+										<strong><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></strong><br>
 									<?php endif; ?>
 							<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
-										<b>Dates:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?><br>
+										<strong><?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?></strong><br>
 									<?php endif; ?>
 							<?php if (get_post_meta($post->ID, 'ecpt_description_short', true)) : ?>
-										<b>Description:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
+										<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
 									<?php endif; ?>
 						</p>
 
