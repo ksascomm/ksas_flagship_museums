@@ -104,7 +104,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ))   { ?>
         	'animationSpeed': 1000,
         	'timer' : true,
         	'advanceSpeed' : 8000,
-        	'directionalNav' : false,
+        	'directionalNav' : true,
 	        'bullets' : false,		
         });
    });
