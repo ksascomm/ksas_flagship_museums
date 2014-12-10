@@ -17,18 +17,18 @@ Template Name: Exhibitions & Programs
 	<div class="twelve columns">
 		<section class="row">
 			
-			<div class="five columns copy">
+			<div class="seven columns copy">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<h2><?php the_title();?></h2>
 				<p><?php the_content(); ?></p>
 			<?php endwhile; endif; ?>
 			</div>
 
-			<div class="seven columns" id="fields_search" role="search">
+			<div class="five columns" id="fields_search" role="search">
 				<form action="#">
 					<fieldset class="radius10"> 
 						<?php $exhibits = get_terms('exhibition_type', array(
-							'orderby' 		=> 'name',
+							'orderby' 		=> 'ID',
 							'order'			=> 'ASC',
 							'hide_empty'	=> true,
 							));
@@ -78,13 +78,13 @@ Template Name: Exhibitions & Programs
 			<div class="twelve columns field radius10" id="<?php echo $program_name; ?>">
 			<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field">
 					<?php if ( has_post_thumbnail()) { ?> 
-						<?php the_post_thumbnail('rss'); ?>
+						<?php the_post_thumbnail('exhibits'); ?>
 					<?php } ?>			    
-					<h3><?php the_title(); ?></h3>
+					<h4 class="white"><?php the_title(); ?></h4>
 				</a>
 
 				<div class="row">
-					<div class="twelve columns">
+					<div class="twelve columns fields ">
 						<p>
 							<?php if (get_post_meta($post->ID, 'ecpt_location', true)) : ?>
 										<strong><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></strong><br>

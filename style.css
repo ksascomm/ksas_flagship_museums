@@ -118,18 +118,24 @@ body.custom-background {
 	background-size: cover;
 }
 
-/******* FIELDS OF STUDY LANDING PAGES ******/
+/******* EXHIBITS PAGE ******/
+
 a.field img {
 margin-left: 0px !important;
 }
+
+.fields p {
+color: #FFF;
+}
+
 .mobile-field {margin-bottom: 30px;}
 div.field {
-	background: #d9c89e;
+	background: #336699;
 	background: rgba(51, 102, 153, .8);
 	padding: 25px 15px;;
 }
 div.field img {
-	height: 175px;
+	height: 100%;
 }
 
 .field h3 {
@@ -196,4 +202,14 @@ ul.nav:last-child {
 .exhibit-slide {
 max-height: 500px;
 overflow: hidden;
+}
+
+.exhibit img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+div.orbit-wrapper div.slider-nav span {
+margin-top: inherit;
 }

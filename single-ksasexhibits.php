@@ -37,8 +37,9 @@
 	$caption = $attachment->post_excerpt;
 	$description = $image->post_content;
 ?>
-
+<div class="exhibit">
 <img src="<?php echo wp_get_attachment_url($attachment->ID); ?>" alt="<?php echo $alt; ?>">
+</div>
  <?php } } ?>
 
 
