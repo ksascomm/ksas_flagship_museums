@@ -118,6 +118,8 @@ body.custom-background {
 	background-size: cover;
 }
 
+li.person img {margin-bottom: inherit;}
+
 /******* EXHIBITS PAGE ******/
 
 a.field img {

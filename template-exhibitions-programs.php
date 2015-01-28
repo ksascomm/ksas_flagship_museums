@@ -65,7 +65,7 @@ Template Name: Exhibitions & Programs
 				$degree_types = array();
 					foreach ( $program_types as $program_type ) {
 						$program_type_names[] = $program_type->slug;
-						$exhibiton_types[] = $program_type->name;
+						$exhibition_types[] = $program_type->name;
 					}
 				$program_type_name = join( " ", $program_type_names );
 				$exhibition_type = join( ", ", $exhibition_types );
